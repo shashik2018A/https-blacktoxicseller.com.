@@ -1,141 +1,149 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>BLACK TOXIC | Free Fire ID Seller</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<title>BLACK TOXIC • Gaming Services</title>
 <style>
-body{margin:0;font-family:Arial;background:#0b0f1a;color:#fff}
-header{background:linear-gradient(90deg,#ff9800,#ff3d00);padding:15px;text-align:center;font-size:22px;font-weight:bold}
-.section{padding:25px}
-h2{color:#ff9800;margin-bottom:15px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
-.card{background:#141a2e;border-radius:15px;overflow:hidden;box-shadow:0 0 15px rgba(0,0,0,.6)}
-.card img{width:100%;height:220px;object-fit:cover}
-.info{padding:15px}
-.info h3{margin:5px 0;color:#ff9800}
-.info p{margin:4px 0;font-size:14px}
-button{margin-top:10px;width:100%;padding:10px;background:#ff9800;border:none;border-radius:8px;font-weight:bold;cursor:pointer}
-button:hover{background:#ff5722}
-.price{color:#00ff9c;font-weight:bold}
-
-#popup{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.85);justify-content:center;align-items:center}
-.popup-box{background:#141a2e;padding:20px;width:90%;max-width:400px;border-radius:15px}
-.popup-box img{width:100%;border-radius:10px}
-.close{background:red}
-
-.contact a{display:block;color:#00ff9c;text-decoration:none;margin:5px 0}
-footer{text-align:center;padding:15px;background:#0a0e18;font-size:14px}
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(120deg,#050b1a,#020617);
+color:#fff;
+}
+a{color:#00ffcc;text-decoration:none}
+.box{
+max-width:420px;
+margin:40px auto;
+background:#0b1025;
+padding:20px;
+border-radius:15px;
+box-shadow:0 0 25px #00ffcc33;
+}
+input,textarea,button{
+width:100%;
+padding:12px;
+margin:8px 0;
+border-radius:8px;
+border:none;
+outline:none;
+}
+button{
+background:#00ffcc;
+font-weight:bold;
+cursor:pointer;
+}
+.hidden{display:none}
+.card{
+background:#0f1733;
+padding:15px;
+margin:15px 0;
+border-radius:12px;
+}
 </style>
 </head>
 
 <body>
 
-<header>🔥 BLACK TOXIC – FREE FIRE ID SELLER 🔥</header>
-
-<!-- PROFILES -->
-<div class="section">
-<h2>🔥 Available Free Fire Profiles</h2>
-<div class="cards">
-
-<div class="card">
-<img src="https://i.imgur.com/8QfQY0R.jpg">
-<div class="info">
-<h3>BOSS SHASHI BHAI</h3>
-<p>Level: 65 | Rank: Heroic</p>
-<p>Diamonds: 1200+ | Outfits: 350+</p>
-<p class="price">₹8,999</p>
-<button onclick="openProfile('https://i.imgur.com/8QfQY0R.jpg','BOSS SHASHI BHAI','65','Heroic','1200+','350+','BLACK TOXIC','₹8,999')">View Profile</button>
-</div>
+<!-- LOGIN -->
+<div class="box" id="loginBox">
+<h2>🔐 Login</h2>
+<input id="loginEmail" placeholder="Email">
+<input id="loginPass" placeholder="Password" type="password">
+<button onclick="login()">Login</button>
+<p onclick="go('registerBox')">New User? Register</p>
 </div>
 
-<div class="card">
-<img src="https://i.imgur.com/3ZQ3ZzY.jpg">
-<div class="info">
-<h3>AMAN BHAI</h3>
-<p>Level: 58 | Rank: Diamond</p>
-<p>Diamonds: 800+ | Outfits: 300+</p>
-<p class="price">₹7,499</p>
-<button onclick="openProfile('https://i.imgur.com/3ZQ3ZzY.jpg','AMAN BHAI','58','Diamond','800+','300+','BLACK TOXIC','₹7,499')">View Profile</button>
-</div>
-</div>
-
-<div class="card">
-<img src="https://i.imgur.com/VZ4R5cN.jpg">
-<div class="info">
-<h3>FF PRO PLAYER</h3>
-<p>Level: 72 | Rank: Heroic</p>
-<p>Diamonds: 2000+ | Outfits: 420+</p>
-<p class="price">₹15,499</p>
-<button onclick="openProfile('https://i.imgur.com/VZ4R5cN.jpg','FF PRO PLAYER','72','Heroic','2000+','420+','BLACK TOXIC','₹15,499')">View Profile</button>
-</div>
-</div>
-
-</div>
-</div>
-
-<!-- SERVICES -->
-<div class="section">
-<h2>⚡ Our Services</h2>
-<p>🔥 Level Boost – ₹2,500</p>
-<p>🏆 Rank Push (BR / CS)</p>
-<p>💎 Diamonds Top-Up</p>
-<p>🛡 Guild Glory Push</p>
+<!-- REGISTER -->
+<div class="box hidden" id="registerBox">
+<h2>📝 Register</h2>
+<input id="rname" placeholder="Your Name">
+<textarea id="rmsg" placeholder="Comment / Order"></textarea>
+<button onclick="startPayment()">Proceed to Payment</button>
+<p onclick="go('loginBox')">Back to Login</p>
 </div>
 
 <!-- PAYMENT -->
-<div class="section">
+<div class="box hidden" id="paymentBox">
 <h2>💳 Payment</h2>
-<p>UPI Accepted (PhonePe / GPay / Paytm)</p>
-<p><b>Note:</b> Payment ke baad screenshot WhatsApp par bheje</p>
-<p>⏱ Delivery Time: 5–30 Minutes</p>
+<p>Amount: ₹199 (Demo)</p>
+<button onclick="paymentDone()">Pay Now</button>
+<p style="font-size:12px">Demo payment only</p>
 </div>
 
-<!-- CONTACT -->
-<div class="section">
-<h2>📞 Contact & Support</h2>
-<div class="contact">
-<a href="https://wa.me/916203001040" target="_blank">WhatsApp</a>
-<a href="tel:+916203001040">Call</a>
-<a href="https://instagram.com/aestheticboy__20" target="_blank">Instagram</a>
-<a href="https://facebook.com" target="_blank">Facebook</a>
-</div>
+<!-- GENERATED ACCOUNT -->
+<div class="box hidden" id="credBox">
+<h2>🎉 Account Created</h2>
+<p>Email: <b id="genEmail"></b></p>
+<p>Password: <b id="genPass"></b></p>
+<p>✔ Use this to login</p>
 </div>
 
-<!-- RULES -->
-<div class="section">
-<h2>📜 Rules</h2>
-<p>✔️ Full payment ke baad ID milegi</p>
-<p>✔️ Login ke baad password change mandatory</p>
-<p>❌ No refund after delivery</p>
-<p>✔️ Serious buyers only</p>
+<!-- DASHBOARD -->
+<div class="box hidden" id="dashboard">
+<h2>🔥 BLACK TOXIC DASHBOARD</h2>
+
+<div class="card">
+<h3>🎮 Free Fire ID Catalogue</h3>
+<p>• Level • Prime • Emotes • Weapons • Vehicles</p>
 </div>
 
-<!-- POPUP -->
-<div id="popup">
-<div class="popup-box">
-<img id="pimg">
-<h3 id="pname"></h3>
-<p>Level: <span id="plevel"></span></p>
-<p>Rank: <span id="prank"></span></p>
-<p>Diamonds: <span id="pdiamond"></span></p>
-<p>Outfits: <span id="poutfit"></span></p>
-<p>Guild: <span id="pguild"></span></p>
-<p><b>Price:</b> <span id="pprice"></span></p>
-<button class="close" onclick="closeProfile()">Close</button>
-</div>
+<div class="card">
+<h3>🏆 Achievements</h3>
+<p>All lifetime services & chats included</p>
 </div>
 
-<footer>© 2026 BLACK TOXIC FF SELLER | All Rights Reserved</footer>
+<div class="card">
+<h3>💬 Support</h3>
+<p>Auto Reply Enabled<br>24x7 Demo Support</p>
+</div>
+
+<button onclick="logout()">Logout</button>
+</div>
 
 <script>
-function openProfile(img,n,l,r,d,o,g,p){
-popup.style.display="flex";
-pimg.src=img;pname.innerText=n;plevel.innerText=l;prank.innerText=r;
-pdiamond.innerText=d;poutfit.innerText=o;pguild.innerText=g;pprice.innerText=p;
+function go(id){
+document.querySelectorAll('.box').forEach(b=>b.classList.add('hidden'));
+document.getElementById(id).classList.remove('hidden');
 }
-function closeProfile(){popup.style.display="none";}
+
+function rand(len){
+let c="abcdefghijklmnopqrstuvwxyz0123456789";
+let s="";
+for(let i=0;i<len;i++) s+=c[Math.floor(Math.random()*c.length)];
+return s;
+}
+
+function startPayment(){
+if(!rname.value||!rmsg.value){alert("Fill details");return;}
+go('paymentBox');
+}
+
+function paymentDone(){
+let e=rand(6)+"@blacktoxic.demo";
+let p=rand(8);
+localStorage.setItem("email",e);
+localStorage.setItem("pass",p);
+localStorage.setItem("paid","yes");
+genEmail.innerText=e;
+genPass.innerText=p;
+go('credBox');
+}
+
+function login(){
+if(
+loginEmail.value===localStorage.getItem("email") &&
+loginPass.value===localStorage.getItem("pass") &&
+localStorage.getItem("paid")=="yes"
+){
+go('dashboard');
+}else{
+alert("Invalid login or payment not done");
+}
+}
+
+function logout(){
+go('loginBox');
+}
 </script>
 
 </body>
