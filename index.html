@@ -4,93 +4,169 @@
 <meta charset="UTF-8">
 <title>BLACK TOXIC SELLER | Premium Free Fire Store</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 *{box-sizing:border-box}
 body{margin:0;font-family:Poppins,Arial;background:radial-gradient(circle at top,#1b1f3b,#000);color:#eaeaea}
 a{text-decoration:none;color:inherit}
 
 /* ADMIN LOGIN */
-#adminBox{max-width:360px;margin:90px auto;background:linear-gradient(145deg,#0f172a,#020617);padding:25px;border-radius:16px;text-align:center;box-shadow:0 0 40px rgba(255,152,0,.25)}
+#adminBox{
+ max-width:360px;margin:90px auto;
+ background:#020617;padding:25px;border-radius:16px;
+ text-align:center;box-shadow:0 0 40px rgba(255,152,0,.3)
+}
 #adminBox h2{color:#ff9800}
-#adminBox input{width:100%;padding:12px;margin:12px 0;border-radius:10px;border:none}
-#adminBox button{width:100%;padding:12px;border:none;border-radius:10px;font-weight:bold;background:linear-gradient(90deg,#ff9800,#ff3d00);cursor:pointer}
+#adminBox input{width:100%;padding:12px;margin:10px 0;border-radius:10px;border:none}
+#adminBox button{
+ width:100%;padding:12px;
+ background:linear-gradient(90deg,#ff9800,#ff3d00);
+ border:none;border-radius:10px;font-weight:bold;cursor:pointer
+}
 #msg{color:#ff9800}
 
+/* hide site before admin login */
 body:not(.admin) header,
 body:not(.admin) .container,
 body:not(.admin) footer,
 body:not(.admin) .whatsapp{display:none}
 
 /* HEADER */
-header{background:linear-gradient(90deg,#ff9800,#ff3d00);padding:18px;text-align:center;font-size:22px;font-weight:800}
+header{
+ background:linear-gradient(90deg,#ff9800,#ff3d00);
+ padding:18px;text-align:center;
+ font-size:22px;font-weight:800
+}
 
 /* LAYOUT */
 .container{max-width:1200px;margin:auto;padding:20px}
-section{background:rgba(15,23,42,.85);backdrop-filter:blur(8px);padding:20px;border-radius:18px;margin-top:22px;box-shadow:0 0 25px rgba(0,0,0,.6)}
+section{
+ background:rgba(15,23,42,.85);
+ padding:20px;border-radius:18px;
+ margin-top:22px
+}
 h2{color:#ffb703}
 
-/* CARDS */
-.id-card,.service-card{background:#020617;border-radius:18px;overflow:hidden;margin-bottom:22px;border:1px solid #1e293b;padding:16px}
-.id-card img{width:100%;height:230px;object-fit:cover}
-.price{color:#22c55e;font-size:19px;font-weight:700}
+/* ID CARD */
+.id-card{
+ background:#020617;border-radius:18px;
+ overflow:hidden;margin-bottom:22px;
+ border:1px solid #1e293b;padding:16px
+}
+.id-card img{
+ width:100%;height:220px;object-fit:cover;
+ border-radius:12px;margin-bottom:10px
+}
+.price{color:#22c55e;font-size:18px;font-weight:700}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+/* SERVICES */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.service-card{
+ background:#020617;border:1px solid #1e293b;
+ border-radius:16px;padding:18px
+}
 
 /* BUTTON */
-.btn{display:block;margin-top:12px;background:linear-gradient(90deg,#25D366,#16a34a);color:#000;padding:13px;border-radius:12px;font-weight:800;text-align:center}
+.btn{
+ display:block;margin-top:12px;
+ background:#25D366;color:#000;
+ padding:12px;border-radius:12px;
+ font-weight:800;text-align:center
+}
 
 /* FLOAT WHATSAPP */
-.whatsapp{position:fixed;bottom:22px;right:22px;background:#25D366;color:#fff;font-size:26px;padding:15px;border-radius:50%;box-shadow:0 0 20px rgba(37,211,102,.6)}
+.whatsapp{
+ position:fixed;bottom:22px;right:22px;
+ background:#25D366;color:#fff;
+ font-size:26px;padding:15px;border-radius:50%
+}
 
-footer{text-align:center;padding:20px;color:#94a3b8;font-size:13px}
+footer{text-align:center;padding:20px;color:#94a3b8}
 </style>
 </head>
 
 <body>
 
+<!-- ADMIN LOGIN -->
 <div id="adminBox">
- <h2>🔐 Admin Access Only</h2>
- <input id="adminPass" type="password" placeholder="Enter Admin Password">
+ <h2>🔐 Admin Access</h2>
+ <input id="adminPass" type="password" placeholder="Admin Password">
  <button onclick="adminLogin()">Unlock Website</button>
- <div id="msg"></div>
+ <p id="msg"></p>
 </div>
 
 <header>🔥 BLACK TOXIC SELLER – PREMIUM FREE FIRE STORE 🔥</header>
 
 <div class="container">
 
+<!-- PREMIUM ID -->
 <section>
-<h2>🎮 Free Fire ID Catalogue (18 IDs)</h2>
+<h2>⭐ Premium Highlight ID</h2>
+<div class="id-card">
+ <h3>AMAN?BHAI? (PREMIUM)</h3>
+ <p><b>UID:</b> 4271992054</p>
+ <p>Level: 76 | Prime: 6 | Rank: Heroic</p>
+ <p class="price">₹ PREMIUM</p>
+ <a class="btn"
+ href="https://wa.me/916203001040?text=Buy%20Premium%20ID%20AMAN%20UID%204271992054">
+ Buy on WhatsApp
+ </a>
+</div>
 </section>
 
+<!-- ID CATALOGUE -->
 <section>
+<h2>🎮 Free Fire ID Catalogue (18 IDs with UID)</h2>
+
 <script>
-for(let i=1;i<=18;i++){
+const ids=[
+ {id:1, uid:"2154985654"},
+ {id:2, uid:"1958150146"},
+ {id:3, uid:"1656483474"},
+ {id:4, uid:"2014922253"},
+ {id:5, uid:"2300776684"},
+ {id:6, uid:"2128773342"},
+ {id:7, uid:"1103758644"},
+ {id:8, uid:"2325463837"},
+ {id:9, uid:"2394300328"},
+ {id:10, uid:"4271992054"},
+ {id:11, uid:"2037204499"},
+ {id:12, uid:"1030850421"},
+ {id:13, uid:"2357897912"},
+ {id:14, uid:"2587200948"},
+ {id:15, uid:"2710153021"},
+ {id:16, uid:"7158010642"},
+ {id:17, uid:"5830427089"},
+ {id:18, uid:"4381277978"}
+];
+
+ids.forEach((x,i)=>{
 document.write(`
 <div class="id-card">
-<img src="images/id${i}.jpg">
-<h3>ID ${i} – Heroic Account</h3>
-<p>Level: ${78-i} | Prime: ${i<10?6:5}</p>
-<p>Items: Rare outfits, emotes, gun skins</p>
-<p class="price">₹${9000-(i*250)}</p>
-<a class="btn" href="https://wa.me/916203001040?text=Buy%20ID%20${i}">Buy on WhatsApp</a>
+ <img src="images/id${x.id}.jpg" alt="FF ID ${x.id}">
+ <h3>ID ${x.id} – Heroic Account</h3>
+ <p><b>UID:</b> ${x.uid}</p>
+ <p>Level: ${78-i} | Prime: ${i<10?6:5}</p>
+ <p class="price">₹${9000-(i*250)}</p>
+ <a class="btn"
+ href="https://wa.me/916203001040?text=Buy%20ID%20${x.id}%0AUID:%20${x.uid}">
+ Buy on WhatsApp
+ </a>
 </div>
 `);
-}
+});
 </script>
 </section>
 
-<!-- ALL FREE FIRE SERVICES -->
+<!-- SERVICES -->
 <section>
 <h2>🔥 Free Fire Services</h2>
-
 <div class="grid">
 
 <div class="service-card">
 <h3>🚀 Rank Push (BR / CS)</h3>
-<p>Heroic / Grandmaster Push</p>
 <p class="price">From ₹999</p>
-<a class="btn" href="https://wa.me/916203001040?text=Rank%20Push%20Service">Order</a>
+<a class="btn" href="https://wa.me/916203001040?text=Rank%20Push">Order</a>
 </div>
 
 <div class="service-card">
@@ -101,58 +177,31 @@ document.write(`
 
 <div class="service-card">
 <h3>❤️ Guild Vote / Like</h3>
-<p>Increase Guild Popularity</p>
 <p class="price">From ₹199</p>
-<a class="btn" href="https://wa.me/916203001040?text=Guild%20Vote%20Service">Order</a>
+<a class="btn" href="https://wa.me/916203001040?text=Guild%20Vote">Order</a>
 </div>
 
 <div class="service-card">
 <h3>📈 Profile Like Boost</h3>
-<p>Real & Safe Likes</p>
 <p class="price">From ₹99</p>
-<a class="btn" href="https://wa.me/916203001040?text=Profile%20Like%20Boost">Order</a>
-</div>
-
-<div class="service-card">
-<h3>🎯 KD Push</h3>
-<p>Ranked KD Improve</p>
-<p class="price">From ₹499</p>
-<a class="btn" href="https://wa.me/916203001040?text=KD%20Push%20Service">Order</a>
-</div>
-
-<div class="service-card">
-<h3>🔄 ID Exchange</h3>
-<p>Old ID → New ID</p>
-<p class="price">Negotiable</p>
-<a class="btn" href="https://wa.me/916203001040?text=ID%20Exchange">Order</a>
-</div>
-
-<div class="service-card">
-<h3>🛡 ID Secure Help</h3>
-<p>Account Safety Guidance</p>
-<p class="price">Free / Paid</p>
-<a class="btn" href="https://wa.me/916203001040?text=ID%20Security%20Help">Contact</a>
+<a class="btn" href="https://wa.me/916203001040?text=Profile%20Like">Order</a>
 </div>
 
 </div>
 </section>
 
+<!-- PAYMENT -->
 <section>
 <h2>💳 Payment</h2>
 <p>UPI: PhonePe / Google Pay / Paytm</p>
 <p>Payment ke baad screenshot WhatsApp par bheje</p>
 </section>
 
-<section>
-<h2>📞 Contact</h2>
-<p>WhatsApp / Call / Email Available</p>
-</section>
-
 </div>
 
 <a class="whatsapp" href="https://wa.me/916203001040">💬</a>
 
-<footer>© 2026 BLACK TOXIC SELLER | Premium Store</footer>
+<footer>© 2026 blacktoxicseller.com | All Rights Reserved</footer>
 
 <script>
 const ADMIN_PASSWORD="Nidhiji@@";
@@ -161,7 +210,7 @@ function adminLogin(){
   document.body.classList.add("admin");
   adminBox.style.display="none";
  }else{
-  msg.innerText="❌ Wrong Admin Password";
+  msg.innerText="❌ Wrong Password";
  }
 }
 </script>
