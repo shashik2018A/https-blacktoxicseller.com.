@@ -2,138 +2,93 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>BLACK TOXIC SELLER | Free Fire ID Store</title>
+<title>BLACK TOXIC SELLER | Premium Free Fire Store</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial;background:#0b0f1a;color:#eaeaea}
+body{margin:0;font-family:Poppins,Arial;background:radial-gradient(circle at top,#1b1f3b,#000);color:#eaeaea}
 a{text-decoration:none;color:inherit}
 
-header{
-background:linear-gradient(90deg,#ff9800,#ff3d00);
-padding:16px;text-align:center;font-size:22px;font-weight:bold
-}
+/* ADMIN LOGIN */
+#adminBox{max-width:360px;margin:90px auto;background:linear-gradient(145deg,#0f172a,#020617);padding:25px;border-radius:16px;text-align:center;box-shadow:0 0 40px rgba(255,152,0,.25)}
+#adminBox h2{color:#ff9800}
+#adminBox input{width:100%;padding:12px;margin:12px 0;border-radius:10px;border:none}
+#adminBox button{width:100%;padding:12px;border:none;border-radius:10px;font-weight:bold;background:linear-gradient(90deg,#ff9800,#ff3d00);cursor:pointer}
+#msg{color:#ff9800}
 
-.container{max-width:1200px;margin:auto;padding:15px}
+/* hide site before admin login */
+body:not(.admin) header,body:not(.admin) .container,body:not(.admin) footer,body:not(.admin) .whatsapp{display:none}
 
-.card{
-background:#111827;border-radius:14px;
-margin-bottom:20px;overflow:hidden;
-box-shadow:0 0 20px rgba(0,0,0,.6)
-}
+/* HEADER */
+header{background:linear-gradient(90deg,#ff9800,#ff3d00);padding:18px;text-align:center;font-size:22px;font-weight:800}
 
-.card img{
-width:100%;
-height:220px;
-object-fit:cover;
-border-bottom:2px solid #1f2937
-}
+/* LAYOUT */
+.container{max-width:1200px;margin:auto;padding:20px}
+section{background:rgba(15,23,42,.85);backdrop-filter:blur(8px);padding:20px;border-radius:18px;margin-top:22px;box-shadow:0 0 25px rgba(0,0,0,.6)}
+h2{color:#ffb703}
 
-.info{padding:15px}
-.info h3{margin:0;color:#ffcc00}
-.info p{margin:5px 0;font-size:14px}
+/* ID CARD */
+.id-card{background:#020617;border-radius:18px;overflow:hidden;margin-bottom:22px;border:1px solid #1e293b}
+.id-card img{width:100%;height:230px;object-fit:cover}
+.id-details{padding:16px}
+.id-details p{margin:5px 0;font-size:14px}
+.price{color:#22c55e;font-size:19px;font-weight:700}
 
-.price{color:#22c55e;font-size:18px;font-weight:bold}
+/* BUTTON */
+.btn{display:block;margin-top:12px;background:linear-gradient(90deg,#25D366,#16a34a);color:#000;padding:13px;border-radius:12px;font-weight:800;text-align:center}
 
-.btn{
-display:block;margin-top:10px;
-background:#25D366;color:#000;
-padding:12px;text-align:center;
-border-radius:10px;font-weight:bold
-}
+/* CONTACT */
+.contact a{display:inline-block;margin:6px;padding:10px 16px;border-radius:10px;background:#020617;border:1px solid #1e293b}
 
-.whatsapp{
-position:fixed;bottom:20px;right:20px;
-background:#25D366;color:#fff;
-font-size:26px;padding:14px;border-radius:50%
-}
+/* FLOAT WHATSAPP */
+.whatsapp{position:fixed;bottom:22px;right:22px;background:#25D366;color:#fff;font-size:26px;padding:15px;border-radius:50%;box-shadow:0 0 20px rgba(37,211,102,.6)}
 
-footer{
-text-align:center;padding:15px;
-color:#94a3b8;font-size:13px
-}
-
-section{
-background:#0f172a;padding:15px;
-border-radius:14px;margin-bottom:20px
-}
+footer{text-align:center;padding:20px;color:#94a3b8;font-size:13px}
 </style>
 </head>
 
 <body>
 
-<header>🔥 BLACK TOXIC SELLER – FREE FIRE STORE 🔥</header>
+<div id="adminBox">
+ <h2>🔐 Admin Access Only</h2>
+ <input id="adminPass" type="password" placeholder="Enter Admin Password">
+ <button onclick="adminLogin()">Unlock Website</button>
+ <div id="msg"></div>
+</div>
+
+<header>🔥 BLACK TOXIC SELLER – PREMIUM FREE FIRE STORE 🔥</header>
 
 <div class="container">
 
 <section>
-<h2>🎮 Available Free Fire IDs (18 IDs)</h2>
-<p>All IDs with real screenshots • Instant WhatsApp Order</p>
+<h2>🎮 Free Fire ID Catalogue (18 IDs)</h2>
+<p>✔ Screenshot Proof • ✔ Instant WhatsApp Order • ✔ Premium Store</p>
 </section>
 
-<!-- ================= 18 IDS ================= -->
-
-<!-- ID 1 -->
-<div class="card">
-<img src="images/id1.jpg">
-<div class="info">
-<h3>ID 1 – HEROIC ACCOUNT</h3>
-<p>Level: 75+</p>
-<p>Rank: Heroic</p>
-<p>Prime: Level 6</p>
-<p>Items: Rich outfits, emotes, gun skins</p>
-<p class="price">₹8,999</p>
-<a class="btn" href="https://wa.me/916203001040?text=I%20want%20to%20buy%20ID%201">Buy on WhatsApp</a>
+<section>
+<script>
+for(let i=1;i<=18;i++){
+document.write(`
+<div class="id-card">
+<img src="images/id${i}.jpg" alt="FF ID ${i}">
+<div class="id-details">
+<h3>ID ${i} – Heroic Account</h3>
+<p>Level: ${78-i} | Prime: ${i<10?6:5}</p>
+<p>Items: Rare outfits, emotes, gun skins</p>
+<p class="price">₹${9000-(i*250)}</p>
+<a class="btn" href="https://wa.me/916203001040?text=I%20want%20to%20buy%20ID%20${i}">Buy on WhatsApp</a>
 </div>
 </div>
-
-<!-- ID 2 -->
-<div class="card">
-<img src="images/id2.jpg">
-<div class="info">
-<h3>ID 2 – HEROIC ACCOUNT</h3>
-<p>Level: 72+</p>
-<p>Rank: Heroic</p>
-<p>Prime: Level 6</p>
-<p>Items: Premium skins & pets</p>
-<p class="price">₹7,499</p>
-<a class="btn" href="https://wa.me/916203001040?text=I%20want%20to%20buy%20ID%202">Buy on WhatsApp</a>
-</div>
-</div>
-
-<!-- ID 3 -->
-<div class="card">
-<img src="images/id3.jpg">
-<div class="info">
-<h3>ID 3 – HEROIC ACCOUNT</h3>
-<p>Level: 70+</p>
-<p>Rank: Heroic</p>
-<p>Prime: Level 5+</p>
-<p>Items: Heavy inventory</p>
-<p class="price">₹6,999</p>
-<a class="btn" href="https://wa.me/916203001040?text=I%20want%20to%20buy%20ID%203">Buy on WhatsApp</a>
-</div>
-</div>
-
-<!-- ID 4 to ID 18 -->
-<!-- SAME FORMAT – only image & price change -->
-
-<!-- SHORTCUT -->
-<!-- copy-paste ID 3 block and change:
-img src = images/id4.jpg ... id18.jpg
-ID number
-Price -->
-
-<!-- ================= SERVICES ================= -->
+`);
+}
+</script>
+</section>
 
 <section>
-<h2>🛠 Guild & Boost Services</h2>
-<p>🤖 Guild Glory Bot</p>
-<p>1 Bot – ₹200</p>
-<p>4 Bot – ₹799</p>
-<p>10 Bot – ₹1500</p>
+<h2>🛠 Premium Services</h2>
+<p>🚀 Level Boost (1 → 7) – ₹2500</p>
 <p>❤️ Guild Vote / Like Service</p>
+<p>🤖 Guild Glory Bot: 1 Bot ₹200 | 4 Bot ₹799 | 10 Bot ₹1500</p>
 </section>
 
 <section>
@@ -144,17 +99,28 @@ Price -->
 
 <section>
 <h2>📞 Contact</h2>
-<p>📱 WhatsApp: 6203001040</p>
-<p>📧 Email: ShashikantKumar8404@gmail.com</p>
+<div class="contact">
+<a href="https://wa.me/916203001040">WhatsApp</a>
+<a href="tel:+916203001040">Call</a>
+<a href="mailto:ShashikantKumar8404@gmail.com">Email</a>
+</div>
 </section>
 
 </div>
 
 <a class="whatsapp" href="https://wa.me/916203001040">💬</a>
 
-<footer>
-© 2026 BLACK TOXIC SELLER | All Rights Reserved
-</footer>
+<footer>© 2026 BLACK TOXIC SELLER | Premium Store</footer>
+
+<script>
+const ADMIN_PASSWORD="Nidhiji@@";
+function adminLogin(){
+ if(adminPass.value===ADMIN_PASSWORD){
+  document.body.classList.add("admin");
+  adminBox.style.display="none";
+ }else{msg.innerText="❌ Wrong Admin Password";}
+}
+</script>
 
 </body>
 </html>
